@@ -1,0 +1,61 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+class Area
+{
+    private double s;
+    private double a;
+
+    public void setSqfeet(double s)
+    {
+        Logger.debug("This is a setSqfeet Method");
+        this.s=s;
+    }
+
+    public double getSqfeet(double s)
+    {
+        return this.s;  
+    }
+
+    public void setArea(double a)
+    {
+        Logger.debug("This is a setArea Method");
+        this.a=a; 
+    }
+
+    public double getArea() 
+    {
+        if(this.s==1200)   
+        {
+            return (this.a)/(1200*this.s); 
+        } 
+
+        else if(this.s==1500)   
+        {
+            return (this.a)/(1500*this.s);
+        }
+
+        else if(this.s==1800)
+        {
+            return (this.a)/(1800*this.s);
+        }
+
+        else  
+        {
+            return (this.a)/(2500*this.s);
+        }
+    }
+}
+
+public class Main
+{	private static final Logger Logger=LogManager.getLogger(Main.class);
+	public static void main(String[] args)
+	{
+                double area;
+                Logger.debug("This a Main Method");
+		Area ar=new Area(); 
+    		ar.setSqfeet(1500);
+                ar.setArea(2589000);
+                area=ar.getArea();
+                Logger.debug("Area is "+ar.getArea);
+        }
+}
