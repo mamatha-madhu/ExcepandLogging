@@ -1,0 +1,4 @@
+This is a Main Method
+This is a setSqfeet Method
+This is a setArea Method
+Area is 1.1506666667
