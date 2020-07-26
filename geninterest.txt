@@ -1,0 +1,10 @@
+This is a Main Method
+This is a setPrinciple Method
+This is a setRate Method
+This is a setTime Method
+Entering into a simple interest method
+16.1
+Exiting from simple interest method
+Entering into a compound interest method
+17465602
+Exiting from compound interest method
