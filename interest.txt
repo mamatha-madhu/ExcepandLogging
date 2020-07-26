@@ -1,0 +1,67 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+class Interest
+{ 
+	private int pr,t;
+	private double r;
+	public void setPrinciple(int pr )
+	{      
+                Logger.debug("This is a setPrinciple Method");
+		this.pr=pr ; 
+	} 
+
+	public void setRate(double r) 
+	{      
+                Logger.debug("This is a setRate Method");
+		this.r=r;
+	}  
+
+	public void setTime(int t) 
+	{     
+                Logger.debug("This is a setTime Method");
+		this.t=t;
+	} 
+
+	public int getPrinciple() 
+	{
+		return this.pr;   
+	}
+
+	public double getRate()  
+	{
+		return this.r;
+	}
+
+	public int getTime() 
+	{
+		return this.t;
+	}
+
+	public double simpleInterest()
+	{
+                Logger.debug("Entering into a simple interest method");
+        	return ((this.pr)*(this.r)*(this.t))/100;
+                Logger.debug("Exiting from simple interest method");
+	}
+
+	public double compoundInterest()
+	{
+                Logger.debug("Entering into a compound interest method");
+       		return this.pr*(Math.pow((1+this.r),this.t)-1);  
+                Logger.debug("Exiting from compound interest method"); 
+	}
+}
+class Main
+{
+ private static final Logger Logger=LogManager.getLogger(Main.class);
+ public static void main(String[] args)
+ {
+  Logger.debug("This is a Main method");
+  Interest i=new Interest();
+  i.setPrinciple(23);
+  i.setRate(14);
+  i.setTime(5);
+  i.simpleInterest();
+  i.compoundInterest(); 
+ }
+}
